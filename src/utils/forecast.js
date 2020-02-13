@@ -19,7 +19,8 @@ const forecast = (latitude, longitude , callback) => {
                 callback("Unable to find location", undefined);
             }
             else{
-                callback(undefined, `${body.currently.summary}. It's ${body.currently.temperature} C° out there and there's ${body.currently.precipProbability} % of rain`);
+                callback(undefined, `${body.currently.summary}. It's ${body.currently.temperature} C° out there, but fells like ${body.currently.apparentTemperature}.
+                 The humidity is at ${body.currently.humidity} and there's ${body.currently.precipProbability} % of rain.`);
             }
         });
     }
