@@ -20,7 +20,7 @@ const forecast = (latitude, longitude , callback) => {
             }
             else{
                 callback(undefined, `${body.currently.summary}. It's ${body.currently.temperature} C° out there, but fells like ${body.currently.apparentTemperature}.
-                 The humidity is at ${body.currently.humidity} and there's ${body.currently.precipProbability} % of rain.`);
+                 The humidity is at ${body.currently.humidity * 100}% and there's ${body.currently.precipProbability} % of rain.`);
             }
         });
     }
